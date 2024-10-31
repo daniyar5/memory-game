@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Outfit:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Honk", system-ui;
+}
+
+.app{
+    max-width: 1300px;
+    margin: 40px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.space{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+  
+.card img {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    perspective: 1000px;
+}
+  
+.card .front {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+.menu {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title {
+    font-size: 4rem;
+}
+.title p {
+    margin: 0
+}
+
+
+.turn{
+    font-size: 3rem;
+    margin-bottom: 40px
+}
+
+.turn p {
+    margin: 0;
+    width: 400px
+}
+
+.new-game button {
+    width: 250px;
+    height: 100px;
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: rgb(110, 31, 183);
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.win-message{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 40px
+}
+
+.footer {
+    position: absolute;
+    bottom: 30px
+}
+
+.footer p{
+    font-family: "Outfit", sans-serif;
+    color: white
+}
+
+
+.win-message img{
+    width: 200px;
+    height: 150px
+}
